@@ -30,6 +30,7 @@ var animeNone = document.getElementById('textArea');
 animeNone.addEventListener('animationend', function () {
   // animation終了時の処理
   textArea.classList.remove('fadein02');
+
 });
 
 var animeBox = document.getElementById('animeBox')
@@ -43,14 +44,17 @@ btn.addEventListener('click', function () {
   result.innerHTML = omikuji[random]['result'];
   comment.innerHTML = omikuji[random]['comment'];
 
+  textArea.classList.remove('fadein03');
+  textArea.classList.add('dis');
   animeBox.classList.add('fadeup');
   result.classList.add('fontLarge');
-  textArea.classList.add('fadein02');
 
     var el = document.getElementById('animeBox');
     el.addEventListener('animationend', function () {
       // animation終了時の処理
       animeBox.classList.remove('fadeup');
+      textArea.classList.remove('dis');
+      textArea.classList.add('fadein03');
     });
 
 });

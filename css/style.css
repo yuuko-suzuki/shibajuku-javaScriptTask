@@ -56,6 +56,7 @@ h1 {
   cursor: pointer;
   appearance: none;
   outline: none;
+  border-radius: 3px;
   box-shadow: 0 4px rgba(0, 0, 0, .3);
 }
 
@@ -68,9 +69,19 @@ h1 {
   animation: fadein 3s ease .5s forwards, buruburu .1s linear 3s 3 forwards;
 }
 
+.dis {
+  display: none;
+}
+
 .fadein02 {
   opacity: 0;
   animation: fadein 2s ease 3s forwards;
+}
+
+.fadein03 {
+  display: block;
+  opacity: 0;
+  animation: fadein 2s ease .5s forwards;
 }
 
 .fadeup {
